@@ -70,6 +70,7 @@ networks:
   ran:
     external: true
     name: docker_ran
+
   metrics:
     ipam:
       driver: default
