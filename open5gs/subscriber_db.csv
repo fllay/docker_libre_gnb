@@ -1,0 +1,18 @@
+#
+# .csv to store UE's information in HSS
+# Kept in the following format: "Name,IMSI,Key,OP_Type,OP/OPc,AMF,QCI,IP_alloc"
+#
+# Name:     Human readable name to help distinguish UE's. Ignored by the HSS
+# IMSI:     UE's IMSI value
+# Key:      UE's key, where other keys are derived from. Stored in hexadecimal
+# OP_Type:  Operator's code type, either OP or OPc
+# OP/OPc:   Operator Code/Cyphered Operator Code, stored in hexadecimal
+# AMF:      Authentication management field, stored in hexadecimal
+# QCI:      QoS Class Identifier for the UE's default bearer.
+# IP_alloc: Statically assigned IP for the UE.
+#
+# Note: Lines starting by '#' are ignored and will be overwritten
+# List of UEs with IMSI, and key increasing by one for each new UE. Useful for testing with AmariUE simulator and ue_count option
+ue01,001010000062718,F977E20E697D40B490705AEADE114FE0,opc,F69529E7DED8F8E43778D009E5D489B7,9001,9,10.45.0.1
+ue02,001010000062719,BEC6CEAECF3A07451282A63FE32C3D8A,opc,DC30FF0D150098F8F0D3F9FB5537AD72,9001,9,10.45.0.2
+ue03,001010000062717,028220E005F873F1A3284F42372B2988,opc,43189F0995996E7E3679A066D24CEDED,9001,9,10.45.0.3
