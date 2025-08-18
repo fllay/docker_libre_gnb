@@ -42,11 +42,10 @@ services:
       #- /usr/share/uhd/images:/usr/share/uhd/images
       # Save logs and more into gnb-storage
       - gnb-libre-storage:/tmp
-      - ./configs/b200_2x2.yaml:/gnb_config.yml:ro
     # It creates a file/folder into /config_name inside the container
     # Its content would be the value of the file used to create the config
-    #configs:
-    #  - gnb_config.yml
+    configs:
+      - gnb_config.yml
     # Customize your desired network mode.
     # current netowrk configuration creastes a private netwoek with both containers attached
     # An alterantive would be `network: host"`. That would expose your host network into the container. It's the easiest to use if the 5gc is not in your PC
@@ -63,6 +62,9 @@ services:
 #configs:
 #  gnb_config.yml:
 #    file: ${GNB_CONFIG_PATH:-configs/b200_2x2.yaml} # Path to your desired config file
+configs:
+  gnb_config.yml:
+    file: ./configs/b200_2x2.yaml
 volumes:
   gnb-libre-storage:
 
