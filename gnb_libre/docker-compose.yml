@@ -31,8 +31,6 @@ services:
     # privileged mode is requred only for accessing usb devices
     privileged: true
     # Extra capabilities always required
-    env_file:
-      - stack.env
     cap_add:
       - SYS_NICE
       - CAP_SYS_PTRACE
@@ -63,8 +61,8 @@ services:
 
 configs:
   gnb_config.yml:
-    file: ${GNB_CONFIG_PATH:-configs/b200_2x2.yaml} # Path to your desired config file
-
+    #file: ${GNB_CONFIG_PATH:-configs/b200_2x2.yaml} # Path to your desired config file
+    file: ${GNB_CONFIG_PATH}
 volumes:
   gnb-libre-storage:
 
