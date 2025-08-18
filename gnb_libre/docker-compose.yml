@@ -31,6 +31,8 @@ services:
     # privileged mode is requred only for accessing usb devices
     privileged: true
     # Extra capabilities always required
+    env_file:
+      - stack.env
     cap_add:
       - SYS_NICE
       - CAP_SYS_PTRACE
